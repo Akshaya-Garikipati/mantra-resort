@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resort News & Blog | Mantra Resort</title>
+    <meta
+      name="description"
+      content="Read the latest articles on luxury travel, wellness, fine dining, and local events from Mantra Resort."
+    >
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/blog.css">
+  </head>
+  <body>
+    <!-- Transparent Header Scrolled -->
+    <header>
+      <nav class="header">
+        <div class="nav-left">
+          <a href="index.html">Home</a>
+          <a href="rooms.html">Rooms</a>
+          <a href="blog.html" class="active">Blog</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-middle">
+          <h1 class="logo">MANTRA</h1>
+        </div>
+        <div class="nav-right">
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+          <a href="rooms.html" class="roomBooking">Book A Room</a>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero Banner Mini -->
+    <div class="banner1">
+      <img src="images/banner4.webp">
+      <div class="experience-overlay" style="margin-top: 50px;">
+        <h4>Mantra Journal</h4>
+        <h2>News & Lifestyle Blog</h2>
+      </div>
+    </div>
+    <!-- Blog Layout Section -->
+    <section class="blog-section">
+      <div class="blog-container">
+        <!-- Blog Posts Column -->
+        <div class="blog-grid">
+          <!-- Post 1 -->
+          <div class="blog-card">
+            <div class="blog-img">
+              <img src="images/dining.webp" alt="Gourmet dish at resort">
+              <span class="blog-date">June 25, 2026</span>
+            </div>
+            <div class="blog-info">
+              <span class="blog-tag">Gastronomy</span>
+              <h3><a href="#">Unveiling Our New Summer Dining Menu</a></h3>
+              <p>Discover the rich textures and coastal flavors crafted by Executive Chef Alejandro using organic, locally harvested ingredients.</p>
+              <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- Post 2 -->
+          <div class="blog-card">
+            <div class="blog-img">
+              <img src="images/spa.jpg" alt="Relaxed spa setting">
+              <span class="blog-date">June 18, 2026</span>
+            </div>
+            <div class="blog-info">
+              <span class="blog-tag">Wellness</span>
+              <h3><a href="#">Rejuvenate Your Senses: 5 Spa Secrets</a></h3>
+              <p>Learn about our ancient stone therapies and essential oil blends designed to wash away stress and restore physical balance.</p>
+              <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- Post 3 -->
+          <div class="blog-card">
+            <div class="blog-img">
+              <img src="images/beach.webp" alt="Tropical resort beach">
+              <span class="blog-date">June 10, 2026</span>
+            </div>
+            <div class="blog-info">
+              <span class="blog-tag">Activities</span>
+              <h3><a href="#">The Ultimate Guide to Private Beach Yoga</a></h3>
+              <p>Align your breath with the ocean breeze. Read our beginner's guide to sunrise beach meditation and low-impact morning stretches.</p>
+              <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- Post 4 -->
+          <div class="blog-card">
+            <div class="blog-img">
+              <img src="images/bar.jpg" alt="Cocktails at dusk">
+              <span class="blog-date">May 28, 2026</span>
+            </div>
+            <div class="blog-info">
+              <span class="blog-tag">Lifestyle</span>
+              <h3><a href="#">Top 3 Cocktails at the Sky Lounge</a></h3>
+              <p>Explore our mixologists' signature creations, featuring fresh exotic fruit purees and hand-pressed botanical extracts.</p>
+              <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Sidebar Widgets Column -->
+        <div class="blog-sidebar">
+          <!-- Widget 1: Search -->
+          <div class="sidebar-widget">
+            <h4 class="widget-title">Search Journal</h4>
+            <form class="search-form" onsubmit="event.preventDefault(); alert('Search functionality simulated.');">
+              <input type="text" placeholder="Type keywords..." required>
+              <button type="submit" aria-label="Submit search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+          </div>
+          <!-- Widget 2: Recent Posts -->
+          <div class="sidebar-widget">
+            <h4 class="widget-title">Recent Articles</h4>
+            <div class="recent-posts">
+              <div class="recent-post-item">
+                <div class="recent-post-img">
+                  <img src="images/dining.webp" alt="Fine Dining">
+                </div>
+                <div class="recent-post-detail">
+                  <h4><a href="#">Summer Dining Experience</a></h4>
+                  <span>June 25, 2026</span>
+                </div>
+              </div>
+              <div class="recent-post-item">
+                <div class="recent-post-img">
+                  <img src="images/spa.jpg" alt="Luxury Spa">
+                </div>
+                <div class="recent-post-detail">
+                  <h4><a href="#">Ancient Stone Spa Secret</a></h4>
+                  <span>June 18, 2026</span>
+                </div>
+              </div>
+              <div class="recent-post-item">
+                <div class="recent-post-img">
+                  <img src="images/beach.webp" alt="Private Beach">
+                </div>
+                <div class="recent-post-detail">
+                  <h4><a href="#">Guide to Private Beach Yoga</a></h4>
+                  <span>June 10, 2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Widget 3: Newsletter -->
+          <div class="sidebar-widget newsletter-widget">
+            <h4 class="widget-title">Stay Connected</h4>
+            <p>Subscribe to our exclusive journal to receive luxury travel tips, recipes, and seasonal room offers directly.</p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input type="email" placeholder="Your Email Address" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+		<!-- Footer -->
+		<footer>
+			<div class="footer-content">
+				<div class="footer-brand">
+					<h2>MANTRA</h2>
+					<p>Luxury Redefined</p>
+
+					<span class="footer-line"></span>
+
+					<p class="footer-description">
+						Escape into timeless elegance where every stay is crafted with
+						comfort, sophistication, and unforgettable experiences.
+					</p>
+				</div>
+			
+
+				<div class="footer-links">
+					<h3>Explore</h3>
+
+					<a href="index.html">Home</a>
+					<a href="rooms.html">Rooms & Suites</a>
+					<a href="blog.html">Blog</a>
+					<a href="about.html">About Us</a>
+					<a href="contact.html">Contact</a>
+				</div>
+
+				<div class="footer-contact">
+					<h3>Contact</h3>
+					<p>
+						<i class="fa-solid fa-location-dot"></i>
+						Hyderabad, India
+					</p>
+					<p>
+						<i class="fa-solid fa-phone"></i>
+						+91 98765 43210
+					</p>
+					<p>
+						<i class="fa-solid fa-envelope"></i>
+						reservations@mantraresort.com
+					</p>
+				</div>
+
+				<div class="footer-social">
+					<h3>Follow Us</h3>
+					<div class="social-icons-footer">
+						<a href="#">
+							<i class="fa-brands fa-instagram"></i>
+						</a>
+
+						<a href="#">
+							<i class="fa-brands fa-facebook-f"></i>
+						</a>
+
+						<a href="#">
+							<i class="fa-brands fa-x-twitter"></i>
+						</a>
+
+						<a href="#">
+							<i class="fa-brands fa-pinterest-p"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>
+					© 2026 MANTRA Resort • All Rights Reserved
+				</p>
+				<p>
+					Crafted by <span>Akshaya</span>
+				</p>
+			</div>
+		</footer>
+
+    <!-- Scripts -->
+    <script>
+      const header = document.querySelector(".header");
+      window.addEventListener("scroll", function(){
+        if(window.scrollY > 80){
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+      document.getElementById("newsletterForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Thank you for subscribing to the Mantra Resort newsletter!");
+        e.target.reset();
+      });
+    </script>
+  </body>
+</html>
