@@ -24,28 +24,74 @@
   </head>
   <body>
     <!-- Transparent Header Scrolled -->
-    <header>
-      <nav class="header">
-        <div class="nav-left">
-          <a href="index.html">Home</a>
-          <a href="rooms.html">Rooms</a>
-          <a href="blog.html" class="active">Blog</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="nav-middle">
-          <h1 class="logo">MANTRA</h1>
-        </div>
-        <div class="nav-right">
-          <div class="social-icons">
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          </div>
-          <a href="rooms.html" class="roomBooking">Book A Room</a>
-        </div>
-      </nav>
-    </header>
+		<header>
+			<nav class="header">
+					<!-- Left Navigation -->
+					<div class="nav-left">
+							<a href="index.html">Home</a>
+							<a href="rooms.html" class="active">Rooms</a>
+							<a href="blog.html">Blog</a>
+							<a href="about.html">About</a>
+							<a href="contact.html">Contact</a>
+					</div>
+					<!-- Logo -->
+					<div class="nav-middle">
+							<h1 class="logo">MANTRA</h1>
+					</div>
+					<!-- Right Navigation -->
+					<div class="nav-right">
+
+							<div class="social-icons">
+									<a href="#"><i class="fa-brands fa-instagram"></i></a>
+									<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+									<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+							</div>
+
+							<a href="rooms.html" class="roomBooking">
+									Book A Room
+							</a>
+
+					</div>
+
+					<!-- Hamburger -->
+					<button class="menu-btn" onclick="toggleMenu()">
+							<i class="fa-solid fa-bars"></i>
+					</button>
+
+			</nav>
+			<!-- Overlay -->
+			<div class="overlay" onclick="toggleMenu()"></div>
+			<!-- Sidebar -->
+			<div class="mobile-menu">
+
+					<div class="close-btn" onclick="toggleMenu()">
+							<i class="fa-solid fa-xmark"></i>
+					</div>
+
+					<!-- COPY OF DESKTOP NAV -->
+
+					<div class="nav-left">
+							<a href="index.html">Home</a>
+							<a href="rooms.html" class="active">Rooms</a>
+							<a href="blog.html">Blog</a>
+							<a href="about.html">About</a>
+							<a href="contact.html">Contact</a>
+					</div>
+
+					<div class="nav-right">
+
+							<div class="social-icons">
+									<a href="#"><i class="fa-brands fa-instagram"></i></a>
+									<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+									<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+							</div>
+
+							<a href="rooms.html" class="roomBooking">
+									Book A Room
+							</a>
+					</div>
+			</div>
+		</header>
     <!-- Hero Banner Mini -->
     <div class="banner1">
       <img src="images/banner4.webp">
@@ -240,21 +286,6 @@
 			</div>
 		</footer>
 
-    <!-- Scripts -->
-    <script>
-      const header = document.querySelector(".header");
-      window.addEventListener("scroll", function(){
-        if(window.scrollY > 80){
-          header.classList.add("scrolled");
-        } else {
-          header.classList.remove("scrolled");
-        }
-      });
-      document.getElementById("newsletterForm").addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("Thank you for subscribing to the Mantra Resort newsletter!");
-        e.target.reset();
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

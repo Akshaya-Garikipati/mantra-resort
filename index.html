@@ -33,40 +33,62 @@
 			<source src="images/resort.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
-      <header>
+		<header>
         <nav class="header">
+          <!-- Left Navigation -->
           <div class="nav-left">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="rooms.html">Rooms</a>
             <a href="blog.html">Blog</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
           </div>
-
+          <!-- Logo -->
           <div class="nav-middle">
             <h1 class="logo">MANTRA</h1>
           </div>
-
+          <!-- Right Navigation -->
           <div class="nav-right">
             <div class="social-icons">
-              <a href="#">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-
-              <a href="#">
-                <i class="fa-brands fa-x-twitter"></i>
-              </a>
-
-              <a href="#">
-                <i class="fa-brands fa-facebook-f"></i>
-              </a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
-
             <a href="rooms.html" class="roomBooking">
               Book A Room
             </a>
           </div>
+          <!-- Hamburger -->
+          <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </nav>
+        <!-- Overlay -->
+        <div class="overlay" onclick="toggleMenu()"></div>
+        <!-- Sidebar -->
+        <div class="mobile-menu">
+          <div class="close-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <!-- COPY OF DESKTOP NAV -->
+          <div class="nav-left">
+            <a href="index.html" class="active">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="nav-right">
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <a href="rooms.html" class="roomBooking">
+              Book A Room
+            </a>
+          </div>
+        </div>
       </header>
 
       <div class="experience-overlay">
@@ -83,7 +105,6 @@
 				<!-- <a href="rooms.html" class="experience-link">
 					Explore Rooms
 				</a> -->
-
 			</div>
     </section>
 
@@ -122,6 +143,7 @@
         </div>
       </div>
     </section>
+
 
 		<section class="amenities-section">
 
@@ -174,7 +196,6 @@
 							locally sourced ingredients.
 						</p>
 					</div>
-
 				</div>
 
 				<div class="amenity">
@@ -258,8 +279,154 @@
 				</div>
 
 			</div>
-
 		</section>
+
+
+		<section class="experiences-section">
+      <h1 class="heading">Curated Experiences</h1>
+      <div class="experiences-container">
+        <div class="experience-card">
+          <div class="exp-image">
+            <img src="images/beach_dinner.jpg" alt="Private Beach Dinner">
+          </div>
+          <div class="exp-content">
+            <span>Gastronomy</span>
+            <h3>Private Beach Dining</h3>
+            <p>A candlelit gourmet dinner on the soft sands, accompanied by the gentle sound of the ocean waves.</p>
+          </div>
+        </div>
+        <div class="experience-card">
+          <div class="exp-image">
+            <img src="images/yatch.jpeg" alt="Yacht Charter">
+          </div>
+          <div class="exp-content">
+            <span>Adventure</span>
+            <h3>Sunset Yacht Charter</h3>
+            <p>Sail into the golden hour on our private luxury yacht with premium champagne and customized appetizers.</p>
+          </div>
+        </div>
+        <div class="experience-card">
+          <div class="exp-image">
+            <img src="images/helicopter.webp" alt="Helicopter Tour">
+          </div>
+          <div class="exp-content">
+            <span>Leisure</span>
+            <h3>Scenic Helicopter Tour</h3>
+            <p>Witness the breathtaking coastline and resort panorama from a private bird's-eye perspective.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<!-- Stats Grid -->
+		<section class="stats-section">
+			<div class="stats-grid">
+				<div class="stat-item">
+					<h3>150+</h3>
+					<p>Luxury Suites</p>
+				</div>
+				<div class="stat-item">
+					<h3>6+</h3>
+					<p>Michelin Dining</p>
+				</div>
+				<div class="stat-item">
+					<h3>4</h3>
+					<p>Private Beaches</p>
+				</div>
+				<div class="stat-item">
+					<h3>100%</h3>
+					<p>Pure Serenity</p>
+				</div>
+			</div>
+		</section>
+
+		    <!-- Reviews Section -->
+    <section class="reviews-section">
+      <h2 class="heading">What Our Guests Say</h2>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-item">
+          <div>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Our stay at Mantra Resort was absolute heaven. The attention to detail, 
+              the incredible infinity pool overlooking the ocean, and the exceptional service 
+              made our anniversary unforgettable."
+            </p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">
+              <img src="images/avatar1.jpg" alt="Sophia Martinez">
+            </div>
+            <div class="author-meta">
+              <h4>Sophia Martinez</h4>
+              <span>Los Angeles, USA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-item">
+          <div>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Executive Chef Alejandro's culinary creations are a masterpiece. 
+              The dining experience under the stars with fresh, locally sourced seafood 
+              was the highlight of our vacation!"
+            </p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">
+              <img src="images/avatar2.jpg" alt="David Chen">
+            </div>
+            <div class="author-meta">
+              <h4>David Chen</h4>
+              <span>Singapore</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-item">
+          <div>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Rejuvenating therapies at the Luxury Spa completely washed away my stress. 
+              The private beachfront yoga sessions in the morning were deeply therapeutic. 
+              Will definitely return!"
+            </p>
+          </div>
+          <div class="review-author">
+            <div class="author-avatar">
+              <img src="images/avatar3.jpg" alt="Emma Watson">
+            </div>
+            <div class="author-meta">
+              <h4>Emma Watson</h4>
+              <span>London, UK</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 
@@ -367,108 +534,22 @@
 			</div>
     </section>
 
-		    <!-- Reviews Section -->
-    <section class="reviews-section">
-      <h2 class="heading">What Our Guests Say</h2>
 
-      <div class="reviews-grid">
-        <!-- Review 1 -->
-        <div class="review-item">
-          <div>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="review-text">
-              "Our stay at Mantra Resort was absolute heaven. The attention to detail, 
-              the incredible infinity pool overlooking the ocean, and the exceptional service 
-              made our anniversary unforgettable."
-            </p>
-          </div>
-          <div class="review-author">
-            <div class="author-avatar">
-              <img src="images/avatar1.jpg" alt="Sophia Martinez">
-            </div>
-            <div class="author-meta">
-              <h4>Sophia Martinez</h4>
-              <span>Los Angeles, USA</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Review 2 -->
-        <div class="review-item">
-          <div>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="review-text">
-              "Executive Chef Alejandro's culinary creations are a masterpiece. 
-              The dining experience under the stars with fresh, locally sourced seafood 
-              was the highlight of our vacation!"
-            </p>
-          </div>
-          <div class="review-author">
-            <div class="author-avatar">
-              <img src="images/avatar2.jpg" alt="David Chen">
-            </div>
-            <div class="author-meta">
-              <h4>David Chen</h4>
-              <span>Singapore</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div class="review-item">
-          <div>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="review-text">
-              "Rejuvenating therapies at the Luxury Spa completely washed away my stress. 
-              The private beachfront yoga sessions in the morning were deeply therapeutic. 
-              Will definitely return!"
-            </p>
-          </div>
-          <div class="review-author">
-            <div class="author-avatar">
-              <img src="images/avatar3.jpg" alt="Emma Watson">
-            </div>
-            <div class="author-meta">
-              <h4>Emma Watson</h4>
-              <span>London, UK</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-		<!-- Newsletter Banner Section 
-    <section class="newsletter-banner-section">
-      <div class="newsletter-banner-content">
-        <h2>Join the Mantra Circle</h2>
-        <p>
-          Subscribe to receive exclusive travel guides, wellness secrets, 
+		<!-- Newsletter Section -->
+		<section class="newsletter-banner-section">
+			<div class="newsletter-banner-content">
+				<h2>Join the Mantra Circle</h2>
+				<p>
+					Subscribe to receive exclusive travel guides, wellness secrets, 
 					and early access to our seasonal offers and luxury packages.
-        </p>
-        <form class="newsletter-banner-form" id="mainNewsletterForm">
-          <input type="email" placeholder="Your Email Address" required aria-label="Email address for newsletter">
-          <button type="submit" class="newsletter-banner-btn">Subscribe</button>
-        </form>
-      </div>
-    </section>-->
+				</p>
+				<form class="newsletter-banner-form" id="mainNewsletterForm" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Mantra Circle!');">
+					<input type="email" placeholder="Your Email Address" required aria-label="Email address for newsletter">
+					<button type="submit" class="newsletter-banner-btn">Subscribe</button>
+				</form>
+			</div>
+		</section>
 
 		<!-- Footer -->
 		<footer>
@@ -543,41 +624,7 @@
 			</div>
 		</footer>
 
-	<script>
-
-		const header = document.querySelector(".header");
-
-		window.addEventListener("scroll", function(){
-
-			if(window.scrollY > 80){
-				header.classList.add("scrolled");
-			}
-			else{
-				header.classList.remove("scrolled");
-			}
-
-		});
-
-		// Newsletter form submit
-		/*document.getElementById("mainNewsletterForm").addEventListener("submit", function(e) {
-			e.preventDefault();
-			alert("Thank you for joining the Mantra Circle!");
-			e.target.reset();
-		});*/
-
-		const video = document.querySelector(".hero-video");
-
-		video.addEventListener("loadedmetadata", () => {
-			video.currentTime = 5;
-		});
-
-		video.addEventListener("timeupdate", () => {
-			if (video.currentTime >= video.duration - 0.2) {
-				video.currentTime = 5;
-				video.play();
-			}
-		});
-	</script>
+	<script src="js/script.js"></script>
 
   </body>
 </html>

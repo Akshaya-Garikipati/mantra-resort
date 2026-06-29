@@ -1,47 +1,42 @@
+/* ==========================================
+   MANTRA RESORT - ROOMS PAGE STYLES
+   ========================================== */
 /* Banner */
-
 .banner1{
     position:relative;
     width:100%;
     height:75vh;
     overflow:hidden;
 }
-
 .banner1 img{
     width:100%;
     height:100%;
     object-fit:cover;
     display:block;
 }
-
 .filter-container{
     width:90%;
     max-width:1200px;
     margin:70px auto 50px;
-
     display:flex;
     justify-content:center;
     align-items:center;
     flex-wrap:wrap;
     gap:18px;
 }
-
 .filter-btn{
     padding:12px 28px;
     background:#fff;
     color:#111;
-
     border:2px solid rgba(220,167,58,.25);
     border-radius:40px;
     font-size:13px;
     font-weight:600;
     letter-spacing:2px;
     text-transform:uppercase;
-
     cursor:pointer;
     transition:.35s ease;
 }
-
 .filter-btn:hover,
 .filter-btn.active{
     background:#dca73a;
@@ -51,8 +46,6 @@
     box-shadow:
         0 10px 25px rgba(220,167,58,.25);
 }
-
-
 .rooms-showcase{
     width:88%;
     max-width:1400px;
@@ -61,9 +54,7 @@
     border-radius:30px;
     padding:80px;
 }
-
 /* Every room */
-
 .room-showcase{
     display:grid;
     grid-template-columns:1.1fr .9fr;
@@ -71,23 +62,17 @@
     gap:60px;
     margin-bottom:110px;
 }
-
 /* Alternate layout */
-
 .room-showcase.reverse{
     grid-template-columns:.9fr 1.1fr;
 }
-
 .room-showcase.reverse .room-showcase-image{
     order:2;
 }
-
 .room-showcase.reverse .room-showcase-content{
     order:1;
 }
-
 /* IMAGE */
-
 .room-showcase-image{
     position:relative;
     overflow:hidden;
@@ -95,18 +80,15 @@
     border-radius:18px;
     box-shadow:0 18px 45px rgba(0,0,0,.15);
 }
-
 .room-showcase-image img{
     width:100%;
     height:100%;
     object-fit:cover;
     transition:transform .8s ease;
 }
-
 .room-showcase-image:hover img{
     transform:scale(1.08);
 }
-
 .room-showcase-image::after{
     content:"";
     position:absolute;
@@ -115,18 +97,14 @@
     opacity:0;
     transition:.45s;
 }
-
 .room-showcase-image:hover::after{
     opacity:1;
 }
-
-
 .room-showcase-content{
     display:flex;
     flex-direction:column;
     justify-content:center;
 }
-
 .room-price{
     color:#dca73a;
     font-size:15px;
@@ -134,14 +112,12 @@
     text-transform:uppercase;
     margin-bottom:18px;
 }
-
 .room-showcase-content h2{
     font-size:46px;      /* was 58 */
     font-weight:300;
     line-height:1.15;
     margin-bottom:22px;
 }
-
 .room-showcase-content h2::after{
     content:"";
     display:block;
@@ -150,7 +126,6 @@
     background:#dca73a;
     margin-top:18px;
 }
-
 .showcase-description{
     font-size:16px;
     color:#000000;
@@ -164,7 +139,6 @@
     gap:14px;
     margin-bottom:35px;
 }
-
 .room-badges span{
     padding:10px 18px;
     border:1px solid rgba(220,167,58,.25);
@@ -175,45 +149,35 @@
     font-size:13px;
     transition:.35s;
 }
-
 .room-badges span:hover{
     background:#dca73a;
     color:white;
     transform:translateY(-4px);
 }
-
 .room-badges i{
     color:#dca73a;
 }
-
 .room-badges span:hover i{
     color:white;
 }
-
 .book-btn{
     display:inline-flex;
     justify-content:center;
     align-items:center;
-
     width:180px;
     padding:15px 0;
-
     background:transparent;
     color:#dca73a;
-
     border:2px solid #dca73a;
     border-radius:50px;
-
     font-size:13px;
     font-weight:600;
     letter-spacing:3px;
     text-transform:uppercase;
     text-decoration:none;
-
     cursor:pointer;
     transition:all .4s ease;
 }
-
 .book-btn:hover{
     background:white;
     color:#dca73a;
@@ -221,7 +185,6 @@
     box-shadow:
         0 15px 35px rgba(220,167,58,.35);
 }
-
 .modal{
     position:fixed;
     inset:0;
@@ -235,12 +198,10 @@
     transition:.35s ease;
     z-index:5000;
 }
-
 .modal.show{
     opacity:1;
     visibility:visible;
 }
-
 .modal-content{
     width:90%;
     max-width:650px;
@@ -252,11 +213,9 @@
     box-shadow:
         0 30px 70px rgba(0,0,0,.35);
 }
-
 .modal.show .modal-content{
     transform:translateY(0);
 }
-
 .modal-header{
     background:#111;
     padding:28px 35px;
@@ -265,16 +224,13 @@
     align-items:center;
     border-bottom:2px solid #dca73a;
 }
-
 .modal-header h3{
     color:white;
     font-size:30px;
     font-weight:300;
     letter-spacing:1px;
 }
-
 .close-modal{
-
     background:none;
     border:none;
     color:white;
@@ -282,41 +238,33 @@
     cursor:pointer;
     transition:.3s;
 }
-
 .close-modal:hover{
     color:#dca73a;
     transform:rotate(90deg);
 }
-
 .booking-form{
     padding:35px;
 }
-
 .form-group-row{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:20px;
 }
-
 .form-group{
     display:flex;
     flex-direction:column;
     gap:8px;
     margin-bottom:20px;
 }
-
 .form-group label{
-
     font-size:12px;
     font-weight:700;
     text-transform:uppercase;
     letter-spacing:1px;
     color:#111;
 }
-
 .form-group input,
 .form-group select{
-
     width:100%;
     padding:14px 15px;
     border:1px solid rgba(0,0,0,.15);
@@ -326,7 +274,6 @@
     font-size:15px;
     transition:.3s ease;
 }
-
 .form-group input:focus,
 .form-group select:focus{
     border-color:#dca73a;
@@ -334,9 +281,7 @@
     box-shadow:
         0 0 0 4px rgba(220,167,58,.12);
 }
-
 .submit-booking-btn{
-
     width:100%;
     padding:16px;
     border:none;
@@ -351,51 +296,134 @@
     transition:.35s ease;
     margin-top:10px;
 }
-
 .submit-booking-btn:hover{
     background:#c9942b;
     transform:translateY(-2px);
     box-shadow:
         0 12px 28px rgba(220,167,58,.35);
 }
-
-@media(max-width:992px){
-
+/* ===========================
+   TABLETS (992px)
+=========================== */
+@media (max-width:992px){
+    .banner1{
+        height:70vh;
+    }
+    .filter-container{
+        width:95%;
+        gap:18px;
+        margin:50px auto;
+    }
+    .filter-btn{
+        padding:12px 24px;
+        font-size:14px;
+    }
     .rooms-grid{
+        width:95%;
         grid-template-columns:repeat(2,1fr);
         gap:30px;
+        margin:auto;
     }
-
-    .rooms-grid .room-card{
-        height:400px;
+    .rooms-grid .room-card {
+        height:440px; /* Matched to index page */
+        transform: none !important; /* Disable desktop staggers on tablet */
     }
-
+    .modal-content{
+        width:90%;
+        max-width:700px;
+    }
+    .modal-header{
+        padding:25px;
+    }
+    .modal-header h3{
+        font-size:28px;
+    }
+    .booking-form{
+        padding:30px;
+    }
+    .form-group-row{
+        gap:20px;
+    }
+    /* Room Showcase */
+    .rooms-showcase{
+        width:95%;
+    }
+    .room-showcase,
+    .room-showcase.reverse{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+    .room-showcase.reverse .room-showcase-image,
+    .room-showcase.reverse .room-showcase-content{
+        order:unset;
+    }
+    .room-showcase-image{
+        height:500px;
+    }
+    .room-showcase-content{
+        align-items:center;
+        text-align:center;
+    }
+    .room-showcase-content h2{
+        font-size:42px;
+    }
+    .room-showcase-content h2::after{
+        margin:20px auto 0;
+    }
+    .room-description{
+        max-width:650px;
+        font-size:17px;
+        line-height:1.8;
+    }
+    .room-badges{
+        justify-content:center;
+        gap:14px;
+    }
+    .book-btn{
+        width:100%;
+        max-width:300px;
+    }
 }
 
-@media(max-width:768px){
-
+/* ===========================
+   MOBILE & SMALL TABLETS (768px)
+=========================== */
+@media (max-width:768px){
+    /* Banner */
     .banner1{
         height:60vh;
     }
-
+    /* Filters */
     .filter-container{
-        gap:12px;
+        width:95%;
+        margin:40px auto;
+        gap:15px;
     }
-
     .filter-btn{
-        padding:10px 20px;
-        font-size:12px;
+        padding:12px 20px;
+        font-size:13px;
     }
-
-    .rooms-grid{
+    /* Room Cards */
+    .rooms-grid {
+        width:96%;
+        margin:auto;
         grid-template-columns:1fr;
+        gap:25px; /* Matched to index page */
     }
-
-    .rooms-grid .room-card{
-        height:400px;
+    .rooms-grid .room-card {
+        height:380px; /* Matched to index page */
+        transform: none !important; /* Disable desktop staggers on mobile */
     }
+    .room-badges{
+        gap:12px;
+        justify-content:center;
+    }
+    .room-badges span{
+        font-size:13px;
+    }
+    /* Modal */
     .modal-content{
-        width:94%;
+        width:92%;
     }
     .modal-header{
         padding:22px;
@@ -408,12 +436,44 @@
     }
     .form-group-row{
         grid-template-columns:1fr;
-        gap:0;
+        gap:15px;
+    }
+    .submit-booking-btn{
+        width:100%;
+    }
+    /* Room Showcase */
+    .rooms-showcase{
+        width:95%;
+    }
+    .room-showcase{
+        margin-bottom:80px;
+        gap:35px;
+    }
+    .room-showcase-image{
+        height:400px;
+    }
+    .room-showcase-content{
+        align-items:center;
+        text-align:center;
+    }
+    .room-showcase-content h2{
+        font-size:34px;
+    }
+    .room-showcase-content h2::after{
+        margin:18px auto 0;
+    }
+    .room-description{
+        font-size:16px;
+        line-height:1.8;
+        max-width:650px;
+    }
+    .book-btn{
+        width:100%;
+        max-width:280px;
     }
 }
 
 @media(max-width:480px){
-
     .banner1{
         height:45vh;
     }
@@ -425,11 +485,14 @@
         width:100%;
     }
     .rooms-grid{
-        width:94%;
-        gap:25px;
+        width:100%;
+        padding:0 12px;
+        gap:20px;
+        box-sizing:border-box;
     }
     .rooms-grid .room-card{
         height:360px;
+        transform: none !important; /* Disable desktop staggers on small phones */
     }
     .room-badges{
         gap:10px;
@@ -441,101 +504,68 @@
         padding:20px;
     }
     .submit-booking-btn{
-        font-size:14px;
+        font-size:12px;
     }
 }
 
 @media(max-width:1100px){
-
     .room-showcase,
     .room-showcase.reverse{
-
         grid-template-columns:1fr;
-
         gap:40px;
     }
-
     .room-showcase.reverse .room-showcase-image,
     .room-showcase.reverse .room-showcase-content{
-
         order:unset;
     }
-
     .room-showcase-image{
-
         height:520px;
     }
-
     .room-showcase-content{
-
         text-align:center;
         align-items:center;
     }
-
     .room-showcase-content h2{
-
         font-size:44px;
     }
-
     .room-showcase-content h2::after{
-
         margin:20px auto 0;
     }
-
     .room-description{
-
         max-width:650px;
     }
-
 }
 
 @media(max-width:768px){
-
     .rooms-showcase{
-
         width:94%;
     }
-
     .room-showcase{
-
         margin-bottom:90px;
     }
-
     .room-showcase-image{
-
         height:360px;
     }
-
     .room-showcase-content h2{
-
         font-size:34px;
     }
-
     .room-description{
-
         font-size:16px;
     }
-
     .room-badges{
-
         justify-content:center;
     }
-
     .book-btn{
-
         width:100%;
         max-width:280px;
     }
-
 }
 
 .room-showcase .book-btn{
     display:inline-flex !important;
     justify-content:center;
     align-items:center;
-
     opacity:1 !important;
     visibility:visible !important;
-
     transform:none !important;
 }

@@ -15,22 +15,20 @@ section{
 }
 
 .header{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
 
-	position:absolute;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-	top:0;
-	left:0;
-	right:0;
+    padding:30px 70px;
 
-	display:grid;
-	grid-template-columns:1fr auto 1fr;
-	align-items:center;
-	padding:30px 70px;
+    z-index:100;
 
-	z-index:100;
-
-	background: rgba(0,0,0,0.25);
-  
+    background:rgba(0,0,0,.25);
 }
 
 .nav-left{
@@ -116,85 +114,216 @@ section{
 	background:#dca73a;
 	border-color:#dca73a;
 }
-/* 1. Tablets & Smaller Laptops (Max-width: 1024px) */
-@media (max-width: 1024px) {
-  .header {
-    padding: 20px 40px; /* Bring the padding in so it doesn't squish elements */
-  }
-  .logo {
-    font-size: 36px;
-    padding-right: 15px;
-  }
-  .nav-left, 
-  .nav-right {
-    gap: 20px; /* Reduce gaps to save space */
-  }
+/* Hide Mobile Elements on Desktop by Default */
+.menu-btn,
+.mobile-menu,
+.overlay {
+  display: none;
 }
-/* 2. Mobile Landscape & Small Tablets (Max-width: 768px) */
-@media (max-width: 768px) {
-  .header {
-    /* Switch from a 3-column grid to a vertical flex layout so elements don't overlap */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
+/* ==========================================
+   MOBILE HEADER (768px and below)
+========================================== */
+@media (max-width:768px){
+    .header{
+        position: fixed; /* Maintain fixed header on scroll */
+        top:0;
+        left:0;
+        right:0;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:20px 25px;
+        z-index:100;
+        background: transparent;
+    }
     
-    /* 
-      Optionally toggle absolute positioning. Since the header becomes taller on mobile, 
-      setting it to 'relative' prevents it from overlaying too much hero/banner text.
-    */
-    position: relative; 
-    background: rgba(0, 0, 0, 0.85); /* Darken the header overlay for better readability */
-  }
-  .logo {
-    padding-right: 0;
-    font-size: 32px;
-  }
-  .nav-left {
-    justify-content: center;
-    flex-wrap: wrap; /* Allows links to wrap elegantly on small widths */
-    gap: 15px;
-  }
-  .nav-left a {
-    font-size: 14px;
-  }
-  .nav-right {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-  }
-  .social-icons {
-    gap: 20px;
-  }
-  .roomBooking {
-    width: 100%;
-    max-width: 280px; /* Button expands to fill mobile width naturally, up to a limit */
-    text-align: center;
-    padding: 10px 20px;
-  }
+    .header.scrolled {
+        padding: 12px 25px;
+        background-color: rgba(18, 18, 18, 0.95);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    .logo-container {
+        grid-column: unset;
+        justify-self: unset;
+    }
+    .logo{
+        font-size:26px;
+        padding:0;
+        letter-spacing:2px;
+    }
+    /* Hide desktop navigation */
+    .header > .nav-left,
+    .header > .nav-right{
+        display:none;
+    }
+    /* Hamburger Button */
+    .menu-btn{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:42px;
+        height:42px;
+        background:none;
+        border:none;
+        color:#fff;
+        font-size:24px;
+        cursor:pointer;
+        padding: 0;
+        z-index: 101;
+    }
+    /* Backdrop Overlay */
+    .overlay{
+        display: block; /* Overwrite display:none from desktop */
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.65);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        opacity:0;
+        visibility:hidden;
+        transition: opacity .35s ease, visibility .35s ease;
+        z-index:998;
+    }
+    .overlay.active{
+        opacity:1;
+        visibility:visible;
+    }
+    /* Sidebar Drawer */
+    .mobile-menu{
+        display: flex; /* Overwrite display:none from desktop */
+        position:fixed;
+        top:0;
+        right:0;
+        width:280px;
+        max-width:85%;
+        height:100vh;
+        background:#0a0a0a;
+        border-left: 1px solid rgba(255, 255, 255, 0.05);
+        padding:40px 30px;
+        flex-direction:column;
+        transform:translateX(100%);
+        transition:transform .35s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index:999;
+    }
+    .mobile-menu.active{
+        transform:translateX(0);
+    }
+    /* Close button */
+    .close-btn{
+        display:flex;
+        justify-content:flex-end;
+        background: none;
+        border: none;
+        padding: 0;
+        color:#fff;
+        font-size:28px;
+        cursor:pointer;
+        margin-bottom:35px;
+        transition: color 0.3s ease;
+    }
+    
+    .close-btn:hover {
+        color: #dca73a;
+    }
+    /* Navigation Links */
+    .mobile-menu .nav-left{
+        display:flex;
+        flex-direction:column;
+        align-items: flex-start;
+        gap:22px;
+    }
+    .mobile-menu .nav-left a{
+        color:#fff;
+        text-decoration:none;
+        font-size:18px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+    }
+    
+    .mobile-menu .nav-left a:hover,
+    .mobile-menu .nav-left a.active {
+        color: #dca73a;
+    }
+    /* Bottom Section with Social & CTA */
+    .mobile-menu .nav-right{
+        margin-top:auto;
+        display:flex;
+        flex-direction:column;
+        gap:25px;
+        width: 100%;
+    }
+    .mobile-menu .social-icons{
+        display:flex;
+        gap:20px;
+        justify-content: flex-start;
+    }
+    .mobile-menu .social-icons a{
+        color:rgba(255, 255, 255, 0.7);
+        font-size:20px;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .mobile-menu .social-icons a:hover {
+        color: #dca73a;
+        transform: translateY(-2px);
+    }
+    .mobile-menu .roomBooking{
+        display: block;
+        width:100%;
+        text-align:center;
+        padding: 12px 20px;
+        font-size: 12px;
+        background: transparent;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-menu .roomBooking:hover {
+        background: #dca73a;
+        border-color: #dca73a;
+        color: #121212;
+    }
 }
-/* 3. Portrait Mobile Devices (Max-width: 480px) */
-@media (max-width: 480px) {
-  .header {
-    padding: 15px;
-    gap: 15px;
-  }
-  .logo {
-    font-size: 28px;
-  }
-  .nav-left {
-    gap: 12px;
-  }
-  .nav-left a {
-    font-size: 13px;
-  }
-  .social-icons a {
-    font-size: 16px;
-  }
-  .roomBooking {
-    font-size: 14px;
-    padding: 8px 15px;
-  }
+@media (min-width:769px) and (max-width:1024px){
+
+    .header{
+        padding:20px 25px;
+    }
+
+    .logo{
+        font-size:32px;
+    }
+
+    .nav-left{
+        gap:15px;
+    }
+
+    .nav-left a{
+        font-size:13px;
+    }
+
+    .nav-right{
+        gap:15px;
+    }
+
+    .social-icons{
+        gap:12px;
+    }
+
+    .social-icons a{
+        font-size:15px;
+    }
+
+    .roomBooking{
+        padding:8px 14px;
+        font-size:13px;
+    }
 }
